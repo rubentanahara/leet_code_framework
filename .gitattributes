@@ -1,0 +1,63 @@
+# Default: auto-normalize line endings on commit, keep native on checkout
+* text=auto eol=lf
+
+# Source files: always LF
+*.c       text eol=lf
+*.cc      text eol=lf
+*.cpp     text eol=lf
+*.cxx     text eol=lf
+*.h       text eol=lf
+*.hh      text eol=lf
+*.hpp     text eol=lf
+*.hxx     text eol=lf
+*.ipp     text eol=lf
+*.inl     text eol=lf
+*.tpp     text eol=lf
+
+# Build / config
+CMakeLists.txt text eol=lf
+*.cmake        text eol=lf
+*.cmake.in     text eol=lf
+Makefile       text eol=lf
+*.mk           text eol=lf
+*.ninja        text eol=lf
+*.sh           text eol=lf
+*.py           text eol=lf
+
+# Docs / data
+*.md    text eol=lf
+*.txt   text eol=lf
+*.json  text eol=lf
+*.yml   text eol=lf
+*.yaml  text eol=lf
+*.toml  text eol=lf
+
+# Windows-only scripts keep CRLF
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Binary
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.ico  binary
+*.pdf  binary
+*.zip  binary
+*.gz   binary
+*.tar  binary
+*.7z   binary
+*.a    binary
+*.so   binary
+*.dylib binary
+*.dll  binary
+*.exe  binary
+*.o    binary
+*.obj  binary
+
+# GitHub language detection: treat headers as C++, hide build artifacts
+*.hpp linguist-language=C++
+*.h   linguist-language=C++
+build/**       linguist-generated=true
+_deps/**       linguist-vendored=true

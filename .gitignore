@@ -1,0 +1,128 @@
+# Build directories
+build/
+build-*/
+out/
+cmake-build-*/
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+cmake_install.cmake
+install_manifest.txt
+CTestTestfile.cmake
+Testing/
+_deps/
+compile_commands.json
+
+# Ninja
+.ninja_deps
+.ninja_log
+build.ninja
+rules.ninja
+
+# Make
+Makefile.bak
+
+# Compiled object / binary files
+*.o
+*.obj
+*.lo
+*.slo
+*.ko
+*.a
+*.la
+*.lai
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Precompiled headers
+*.gch
+*.pch
+
+# Debug / coverage
+*.dSYM/
+*.su
+*.idb
+*.pdb
+*.gcno
+*.gcda
+*.gcov
+coverage/
+*.profraw
+*.profdata
+callgrind.out.*
+massif.out.*
+perf.data
+perf.data.old
+core
+core.*
+vgcore.*
+
+# Clangd / clang-tidy / cache
+.cache/
+.clangd/
+.clang-tidy.cache
+
+# Compiler / linker output
+*.ilk
+*.exp
+*.lib
+*.map
+*.sln
+*.vcxproj*
+*.suo
+*.user
+
+# Package managers
+vcpkg_installed/
+conan/
+conanbuildinfo.*
+conaninfo.txt
+graph_info.json
+.conan/
+
+# IDE / editor
+.vscode/
+!.vscode/settings.json.example
+.vs/
+.idea/
+*.swp
+*.swo
+*~
+*.bak
+.cproject
+.project
+.settings/
+.metadata/
+Session.vim
+.netrwhist
+tags
+TAGS
+GPATH
+GRTAGS
+GTAGS
+
+# OS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Logs / temp
+*.log
+*.tmp
+*.temp
