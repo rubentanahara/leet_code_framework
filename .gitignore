@@ -3,6 +3,7 @@ build/
 build-*/
 out/
 cmake-build-*/
+graphify-out/
 
 # CMake
 CMakeCache.txt
