@@ -30,17 +30,15 @@ TEST_CASE("1929-concatenation-of-array: negatives and zero") {
 }
 
 TEST_CASE("1929-concatenation-of-array: input is not mutated") {
-    Solution s;
     std::vector<int> nums = {4, 2, 9};
     const std::vector<int> snapshot = nums;
-    (void)s.getConcatenation(nums);
+    (void)lc::p1929::Solution::getConcatenation(nums);
     CHECK(nums == snapshot);
 }
 
 TEST_CASE("1929-concatenation-of-array: result length is exactly 2n") {
-    Solution s;
     std::vector<int> nums(1000, 42);
-    auto out = s.getConcatenation(nums);
+    auto out = lc::p1929::Solution::getConcatenation(nums);
     CHECK(out.size() == nums.size() * 2);
     CHECK(out.front() == 42);
     CHECK(out.back() == 42);
