@@ -1,6 +1,6 @@
 # LeetCode C++
 
-Minimal workspace for solving LeetCode problems in C++20. Each problem is self-contained: solution header, doctest test file, problem description, and personal notes.
+Minimal workspace for solving LeetCode problems in C++20. Agent instructions: [AGENTS.md](AGENTS.md). Each problem is self-contained: solution header, doctest test file, problem description, and personal notes.
 
 ## Requirements
 

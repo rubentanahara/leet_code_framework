@@ -1,0 +1,45 @@
+---
+description: LeetCode C++ workspace — workflow, conventions, architecture
+alwaysApply: true
+---
+
+# LeetCode C++ Workspace
+
+C++20 LeetCode problem workspace. Each problem lives in `problems/NNNN-slug/`. Full docs: `AGENTS.md`.
+
+## Commands
+
+```sh
+cmake --build build
+ctest --test-dir build -R NNNN --output-on-failure
+./scripts/new.sh <number> <slug>
+```
+
+## New problem workflow
+
+1. Scaffold → 2. `README.md` → 3. signature in `solution.hpp` → 4. tests first → 5. implement → 6. **`notes.md` required** → 7. paste to LeetCode
+
+Read order for existing problems: README → notes → solution.
+
+## Conventions
+
+- `namespace lc::pNNNN` (zero-padded), `class Solution` in `solution.hpp`
+- Header-only inline methods (one TU per test exe)
+- `test.cpp`: `DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN`, include `"solution.hpp"`
+- Pair `make_list`/`make_tree` with `free_list`/`free_tree` or ASan leaks
+- `std::size_t` for indices; `static_cast<int>` for LeetCode-shaped returns
+- Strict warnings (`-Wconversion`): avoid `int` over `size()`
+
+## Boundaries
+
+- No CMake edits to add problems (glob auto-discovers)
+- Keep `common/leetcode.hpp` flat; no inheritance or `ISolution` interface
+- Do not switch doctest to `FetchContent_MakeAvailable` without CMake 4.x check
+- Do not skip `notes.md` — it is the learning artifact
+
+## Pattern references
+
+| Pattern | Path |
+|---|---|
+| Hash map complement | `problems/0001-two-sum` |
+| Array concat | `problems/1929-concatenation-of-array` |
